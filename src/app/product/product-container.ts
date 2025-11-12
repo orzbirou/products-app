@@ -35,6 +35,21 @@ import { ProductDetail } from './ui/product-detail/product-detail';
       height: 100%;
       overflow: hidden;
     }
+
+    @media (max-width: 768px) {
+      .left-pane {
+        height: auto;
+        max-height: 60vh;
+        min-height: 300px;
+      }
+
+      .right-pane {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        height: auto;
+        min-height: 40vh;
+      }
+    }
   `]
 })
 export class ProductContainer {}
