@@ -1,0 +1,86 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.product-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  min-height: 0;
+
+  .loading, .error, .no-products {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+
+  .loading {
+    background-color: #f0f8ff;
+    color: #0066cc;
+    border: 1px solid #b3d9ff;
+  }
+
+  .error {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #ffb3b3;
+  }
+
+  .no-products {
+    background-color: #f9f9f9;
+    color: #666;
+    border: 1px solid #ddd;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  flex-shrink: 0;
+
+  .page-btn {
+    padding: 0.5rem 1rem;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+
+    &:hover:not(:disabled) {
+      background-color: #34495e;
+    }
+
+    &:disabled {
+      background-color: #95a5a6;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+
+  .page-info {
+    font-size: 0.9rem;
+    color: #555;
+    min-width: 100px;
+    text-align: center;
+  }
+}

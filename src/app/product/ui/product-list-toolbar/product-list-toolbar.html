@@ -1,0 +1,23 @@
+<div class="toolbar-container">
+  <button class="add-product-btn" (click)="onAddProduct()">
+    + Add Product
+  </button>
+  
+  <input 
+    type="text" 
+    class="search-input" 
+    placeholder="Search products..."
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="onSearchChange($event)"
+  />
+  
+  <select 
+    class="sort-dropdown"
+    [(ngModel)]="sortBy"
+    (ngModelChange)="onSortChange($event)"
+  >
+    <option value="">Sort by...</option>
+    <option value="name">Sort by Name</option>
+    <option value="date">Sort by Date</option>
+  </select>
+</div>

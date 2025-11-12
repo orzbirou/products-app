@@ -1,0 +1,49 @@
+:host {
+    display: block;
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "content content";
+    height: 100%;
+    grid-template-rows: 3rem 1fr;
+    grid-template-columns: 3fr 2fr;
+}
+
+header {
+    grid-area: header;
+    background: #2c3e50;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid #34495e;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        svg {
+            opacity: 0.95;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ecf0f1;
+        }
+    }
+}
+
+app-product-container {
+    grid-area: content;
+    display: grid;
+    grid-template-areas: "left-pane right-pane";
+    grid-template-columns: 3fr 2fr;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "MacBook Pro 16-inch",
+    "description": "Apple MacBook Pro with M2 chip, 16GB RAM, 512GB SSD",
+    "price": 2499.99,
+    "creationDate": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "name": "iPhone 15 Pro",
+    "description": "Latest iPhone with A17 Pro chip, 128GB storage, titanium design",
+    "price": 999.99,
+    "creationDate": "2024-02-20T14:45:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Samsung Galaxy S24 Ultra",
+    "description": "Premium Android smartphone with S Pen, 256GB storage",
+    "price": 1199.99,
+    "creationDate": "2024-03-10T09:15:00Z"
+  },
+  {
+    "id": 4,
+    "name": "Sony WH-1000XM5",
+    "description": "Industry-leading noise canceling wireless headphones",
+    "price": 399.99,
+    "creationDate": "2024-01-25T16:20:00Z"
+  },
+  {
+    "id": 5,
+    "name": "Nike Air Max 270",
+    "description": "Comfortable running shoes with air cushioning technology",
+    "price": 129.99,
+    "creationDate": "2024-04-05T11:30:00Z"
+  },
+  {
+    "id": 6,
+    "name": "Adidas Ultraboost 23",
+    "description": "Premium running shoes with boost midsole technology",
+    "price": 189.99,
+    "creationDate": "2024-04-12T13:45:00Z"
+  },
+  {
+    "id": 7,
+    "name": "Levi's 501 Original Jeans",
+    "description": "Classic straight-fit jeans in medium wash",
+    "price": 79.99,
+    "creationDate": "2024-05-08T08:20:00Z"
+  },
+  {
+    "id": 8,
+    "name": "Ray-Ban Aviator Sunglasses",
+    "description": "Classic aviator sunglasses with polarized lenses",
+    "price": 154.99,
+    "creationDate": "2024-06-02T15:10:00Z"
+  },
+  {
+    "id": 9,
+    "name": "Nintendo Switch OLED",
+    "description": "Gaming console with 7-inch OLED screen and enhanced audio",
+    "price": 349.99,
+    "creationDate": "2024-03-22T12:00:00Z"
+  },
+  {
+    "id": 10,
+    "name": "PlayStation 5",
+    "description": "Next-generation gaming console with 4K gaming capabilities",
+    "price": 499.99,
+    "creationDate": "2024-02-14T17:30:00Z"
+  },
+  {
+    "id": 11,
+    "name": "KitchenAid Stand Mixer",
+    "description": "Professional-grade stand mixer for baking and cooking",
+    "price": 379.99,
+    "creationDate": "2024-07-18T10:45:00Z"
+  },
+  {
+    "id": 12,
+    "name": "Dyson V15 Detect",
+    "description": "Cordless vacuum cleaner with laser detection technology",
+    "price": 749.99,
+    "creationDate": "2024-08-03T14:25:00Z"
+  },
+  {
+    "id": 13,
+    "name": "Canon EOS R5",
+    "description": "Professional mirrorless camera with 45MP full-frame sensor",
+    "price": 3899.99,
+    "creationDate": "2024-01-08T09:00:00Z"
+  },
+  {
+    "id": 14,
+    "name": "Apple Watch Series 9",
+    "description": "Smartwatch with health monitoring and fitness tracking",
+    "price": 399.99,
+    "creationDate": "2024-09-12T11:15:00Z"
+  },
+  {
+    "id": 15,
+    "name": "Tesla Model Y Key Fob",
+    "description": "Premium key fob for Tesla Model Y with advanced features",
+    "price": 175.00,
+    "creationDate": "2024-10-28T16:40:00Z"
+  }
+]

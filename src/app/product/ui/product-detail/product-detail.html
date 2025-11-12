@@ -1,0 +1,95 @@
+<div class="product-detail-container">
+  @if (editedProduct) {
+    <form class="product-form">
+      <h2>{{ isNewProduct ? 'New Product' : 'Edit Product' }}</h2>
+      
+      @if (editedProduct.imageUrl && !isNewProduct) {
+        <div class="image-container">
+          <img [src]="editedProduct.imageUrl" alt="Product preview" class="product-image" />
+        </div>
+      }
+
+      @if (isNewProduct) {
+        <div class="form-group">
+          <label for="imageUrl">Image URL</label>
+          <input 
+            type="text" 
+            id="imageUrl"
+            [(ngModel)]="editedProduct.imageUrl"
+            (ngModelChange)="onFieldChange()"
+            name="imageUrl"
+            placeholder="Enter image URL"
+          />
+        </div>
+      }
+
+      <div class="form-group" [class.has-error]="formErrors['name']">
+        <label for="name">Product Name *</label>
+        <input 
+          type="text" 
+          id="name"
+          [(ngModel)]="editedProduct.name"
+          (ngModelChange)="onFieldChange()"
+          name="name"
+          placeholder="Enter product name"
+          required
+        />
+        @if (formErrors['name']) {
+          <span class="error-message">{{ formErrors['name'] }}</span>
+        }
+      </div>
+
+      <div class="form-group" [class.has-error]="formErrors['description']">
+        <label for="description">Description *</label>
+        <textarea 
+          id="description"
+          [(ngModel)]="editedProduct.description"
+          (ngModelChange)="onFieldChange()"
+          name="description"
+          placeholder="Enter product description"
+          rows="4"
+          required
+        ></textarea>
+        @if (formErrors['description']) {
+          <span class="error-message">{{ formErrors['description'] }}</span>
+        }
+      </div>
+
+      <div class="form-group" [class.has-error]="formErrors['price']">
+        <label for="price">Price *</label>
+        <input 
+          type="number" 
+          id="price"
+          [(ngModel)]="editedProduct.price"
+          (ngModelChange)="onFieldChange()"
+          name="price"
+          placeholder="Enter price"
+          step="0.01"
+          min="0"
+          required
+        />
+        @if (formErrors['price']) {
+          <span class="error-message">{{ formErrors['price'] }}</span>
+        }
+      </div>
+
+      <button 
+        type="button" 
+        class="save-btn" 
+        [disabled]="!isDirty || !isFormValid()"
+        (click)="onSave()"
+      >
+        {{ isNewProduct ? 'Create Product' : 'Save Changes' }}
+      </button>
+    </form>
+  } @else {
+    <div class="empty-state">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 7H11V11H7V13H11V17H13V13H17V11H13V7Z" fill="#ccc"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#ccc"/>
+      </svg>
+      <p>Select a product to view details</p>
+      <p class="sub-text">or click "Add Product" to create a new one</p>
+    </div>
+  }
+</div>

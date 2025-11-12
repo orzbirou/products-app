@@ -1,0 +1,10 @@
+<div class="product-card-container" (click)="onCardClick()">
+    <img [src]="product()?.imageUrl" [alt]="product()?.name" class="product-image"/>
+    <div class="product-content">
+        <div class="product-info">
+            <h3 class="product-name">{{product()?.name}}</h3>
+            <p class="product-description">{{product()?.description}}</p>
+        </div>
+        <button class="delete-button" (click)="onDeleteClick($event)">Delete</button>
+    </div>
+</div>
