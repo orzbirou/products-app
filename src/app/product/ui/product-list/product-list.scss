@@ -83,4 +83,31 @@
     min-width: 100px;
     text-align: center;
   }
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem;
+
+    .page-btn {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.85rem;
+    }
+
+    .page-info {
+      font-size: 0.85rem;
+      min-width: 80px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-btn {
+      padding: 0.35rem 0.6rem;
+      font-size: 0.8rem;
+    }
+
+    .page-info {
+      font-size: 0.8rem;
+      min-width: 70px;
+    }
+  }
 }

@@ -3,6 +3,7 @@
   gap: 1rem;
   padding: 1rem;
   align-items: center;
+  flex-wrap: wrap;
 
   .add-product-btn {
     padding: 0.6rem 1.2rem;
@@ -32,6 +33,7 @@
     border-radius: 4px;
     font-size: 0.95rem;
     transition: border-color 0.2s ease;
+    min-width: 150px;
 
     &:focus {
       outline: none;
@@ -62,6 +64,43 @@
 
     option {
       padding: 0.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 0.75rem;
+    padding: 0.75rem;
+
+    .add-product-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .search-input {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .sort-dropdown {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
+      min-width: 120px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .add-product-btn {
+      width: 100%;
+      order: -1;
+    }
+
+    .search-input {
+      flex: 1 1 100%;
+    }
+
+    .sort-dropdown {
+      flex: 1 1 100%;
+      min-width: unset;
     }
   }
 }
