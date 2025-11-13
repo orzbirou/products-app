@@ -17,10 +17,10 @@ jobs:
           node-version: 22
       - run: npm ci --legacy-peer-deps
       - run: npx ng build --configuration production --output-path docs --base-href "/products-app/"
-      - run: cp docs/browser/index.html docs/index.html && cp docs/browser/index.html docs/404.html && touch docs/.nojekyll
+      - run: cp docs/browser/index.html docs/browser/404.html && touch docs/browser/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: docs/browser
   deploy:
     needs: build
     runs-on: ubuntu-latest
